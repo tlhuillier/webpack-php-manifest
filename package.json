@@ -12,7 +12,8 @@
     "php"
   ],
   "dependencies": {
-    "lodash": "^4.17.4"
+    "lodash": "^4.17.4",
+    "webpack": "^2.3.3"
   },
   "author": "Gabe Blair <gabe@castironcoding.com>",
   "license": "MIT"
