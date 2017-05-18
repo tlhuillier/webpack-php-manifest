@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "Writes output file names to a PHP file.",
   "main": "index.js",
+  "repository": "gblair/webpack-php-manifest",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
