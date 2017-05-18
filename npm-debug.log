@@ -1,0 +1,107 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/opt/nodes/4.7.0/bin/node',
+1 verbose cli   '/opt/boxen/nodenv/versions/4.7.0/bin/npm',
+1 verbose cli   'publish' ]
+2 info using npm@2.15.11
+3 info using node@v4.7.0
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/Users/gblair/Scripts/Node/webpack-php-manifest',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /Users/gblair/.npm/webpack-php-manifest/0.0.1/package.tgz not in flight; packing
+9 verbose correctMkdir /Users/gblair/.npm correctMkdir not in flight; initializing
+10 verbose tar pack [ '/Users/gblair/.npm/webpack-php-manifest/0.0.1/package.tgz',
+10 verbose tar pack   '/Users/gblair/Scripts/Node/webpack-php-manifest' ]
+11 verbose tarball /Users/gblair/.npm/webpack-php-manifest/0.0.1/package.tgz
+12 verbose folder /Users/gblair/Scripts/Node/webpack-php-manifest
+13 info prepublish webpack-php-manifest@0.0.1
+14 verbose addLocalTarball adding from inside cache /Users/gblair/.npm/webpack-php-manifest/0.0.1/package.tgz
+15 verbose correctMkdir /Users/gblair/.npm correctMkdir not in flight; initializing
+16 silly cache afterAdd webpack-php-manifest@0.0.1
+17 verbose afterAdd /Users/gblair/.npm/webpack-php-manifest/0.0.1/package/package.json not in flight; writing
+18 verbose correctMkdir /Users/gblair/.npm correctMkdir not in flight; initializing
+19 verbose afterAdd /Users/gblair/.npm/webpack-php-manifest/0.0.1/package/package.json written
+20 silly publish { name: 'webpack-php-manifest',
+20 silly publish   version: '0.0.1',
+20 silly publish   description: 'Writes output file names to a PHP file.',
+20 silly publish   main: 'index.js',
+20 silly publish   repository:
+20 silly publish    { type: 'git',
+20 silly publish      url: 'git+https://github.com/gblair/webpack-php-manifest.git' },
+20 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
+20 silly publish   keywords: [ 'webpack', 'php' ],
+20 silly publish   dependencies: { lodash: '^4.17.4' },
+20 silly publish   author: { name: 'Gabe Blair', email: 'gabe@castironcoding.com' },
+20 silly publish   license: 'MIT',
+20 silly publish   readme: '## PHP Manifest from Webpack\n\nThis webpack plugin will create a PHP file in your `output.path` directory with a PHP class in it having two static\n attributes: `$jsFiles` and `$cssFiles`. These can be accessed by your PHP application to learn about what to include\n when rendering the frontend of the site.\n \n### Install\n\nWith Yarn:\n\n```\nyarn add webpack-php-manifest\n```\n\nWith NPM:\n\n```\nnpm i webpack-php-manifest\n```\n \n### Usage\n```javascript\n// ...in your webpack config file\n\nconst PhpManifestPlugin = require(\'webpack-php-manifest\');\nconst phpManifest = new PhpManifestPlugin(options);\n\nmodule.exports = {\n  // ...\n  plugins: [\n    phpManifest\n  ]\n}\n```\n\n## Available options:\n\n`output` (default: "assets-manifest")\n\nThe name of the manifest file to write. Will be written to webpack\'s\n `output.path` directory and appended with `.php`.\n \n---\n\n`phpClassName` (default: "WebpackBuiltFiles") \n\nThe PHP class name to use for the class. You can generally ignore this\n unless you have a conflicting PHP class named `\\WebpackBuiltFiles` in your PHP environment.\n \n## Consuming the manifest\n\nCurrently there\'s only one implementation for consuming the generated manifest in a PHP application:\n\n#### October CMS\n\nUse the October CMS plugin called [webpackassets-plugin](https://packagist.org/packages/castiron/webpackassets-plugin).\n',
+20 silly publish   readmeFilename: 'README.md',
+20 silly publish   gitHead: 'a69da490336b835c4ff13665484e5191ee096c36',
+20 silly publish   bugs: { url: 'https://github.com/gblair/webpack-php-manifest/issues' },
+20 silly publish   homepage: 'https://github.com/gblair/webpack-php-manifest#readme',
+20 silly publish   _id: 'webpack-php-manifest@0.0.1',
+20 silly publish   _shasum: 'cf63a449b318df057fee9cfda5c379efe4b4af9d',
+20 silly publish   _from: '.' }
+21 verbose getPublishConfig undefined
+22 silly mapToRegistry name webpack-php-manifest
+23 silly mapToRegistry using default registry
+24 silly mapToRegistry registry https://registry.npmjs.org/
+25 silly mapToRegistry data Result {
+25 silly mapToRegistry   raw: 'webpack-php-manifest',
+25 silly mapToRegistry   scope: null,
+25 silly mapToRegistry   name: 'webpack-php-manifest',
+25 silly mapToRegistry   rawSpec: '',
+25 silly mapToRegistry   spec: 'latest',
+25 silly mapToRegistry   type: 'tag' }
+26 silly mapToRegistry uri https://registry.npmjs.org/webpack-php-manifest
+27 verbose publish registryBase https://registry.npmjs.org/
+28 silly publish uploading /Users/gblair/.npm/webpack-php-manifest/0.0.1/package.tgz
+29 verbose request uri https://registry.npmjs.org/webpack-php-manifest
+30 verbose request sending authorization for write operation
+31 info attempt registry request try #1 at 8:46:59 AM
+32 verbose request using bearer token for auth
+33 verbose request id 59b2fbefa85ac691
+34 http request PUT https://registry.npmjs.org/webpack-php-manifest
+35 http 403 https://registry.npmjs.org/webpack-php-manifest
+36 verbose headers { 'content-type': 'application/json',
+36 verbose headers   'cache-control': 'max-age=300',
+36 verbose headers   'content-length': '95',
+36 verbose headers   'accept-ranges': 'bytes',
+36 verbose headers   date: 'Thu, 18 May 2017 15:46:57 GMT',
+36 verbose headers   via: '1.1 varnish',
+36 verbose headers   connection: 'keep-alive',
+36 verbose headers   'x-served-by': 'cache-sea1048-SEA',
+36 verbose headers   'x-cache': 'MISS',
+36 verbose headers   'x-cache-hits': '0',
+36 verbose headers   'x-timer': 'S1495122417.103866,VS0,VE94',
+36 verbose headers   vary: 'Accept-Encoding' }
+37 verbose request invalidating /Users/gblair/.npm/registry.npmjs.org/webpack-php-manifest on PUT
+38 error publish Failed PUT 403
+39 verbose stack Error: "You cannot publish over the previously published version 0.0.1." : webpack-php-manifest
+39 verbose stack     at makeError (/opt/nodes/4.7.0/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:302:12)
+39 verbose stack     at CachingRegistryClient.<anonymous> (/opt/nodes/4.7.0/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:290:14)
+39 verbose stack     at Request._callback (/opt/nodes/4.7.0/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:210:14)
+39 verbose stack     at Request.self.callback (/opt/nodes/4.7.0/lib/node_modules/npm/node_modules/request/request.js:187:22)
+39 verbose stack     at emitTwo (events.js:87:13)
+39 verbose stack     at Request.emit (events.js:172:7)
+39 verbose stack     at Request.<anonymous> (/opt/nodes/4.7.0/lib/node_modules/npm/node_modules/request/request.js:1044:10)
+39 verbose stack     at emitOne (events.js:77:13)
+39 verbose stack     at Request.emit (events.js:169:7)
+39 verbose stack     at IncomingMessage.<anonymous> (/opt/nodes/4.7.0/lib/node_modules/npm/node_modules/request/request.js:965:12)
+40 verbose statusCode 403
+41 verbose pkgid webpack-php-manifest
+42 verbose cwd /Users/gblair/Scripts/Node/webpack-php-manifest
+43 error Darwin 16.5.0
+44 error argv "/opt/nodes/4.7.0/bin/node" "/opt/boxen/nodenv/versions/4.7.0/bin/npm" "publish"
+45 error node v4.7.0
+46 error npm  v2.15.11
+47 error code E403
+48 error "You cannot publish over the previously published version 0.0.1." : webpack-php-manifest
+49 error If you need help, you may report this error at:
+49 error     <https://github.com/npm/npm/issues>
+50 verbose exit [ 1, true ]
