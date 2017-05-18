@@ -4,7 +4,21 @@ This webpack plugin will create a PHP file in your `output.path` directory with 
  attributes: `$jsFiles` and `$cssFiles`. These can be accessed by your PHP application to learn about what to include
  when rendering the frontend of the site.
  
-Usage:
+### Install
+
+With Yarn:
+
+```
+yarn add webpack-php-manifest
+```
+
+With NPM:
+
+```
+npm i webpack-php-manifest
+```
+ 
+### Usage
 ```javascript
 // ...in your webpack config file
 
@@ -33,7 +47,9 @@ The name of the manifest file to write. Will be written to webpack's
 The PHP class name to use for the class. You can generally ignore this
  unless you have a conflicting PHP class named `\WebpackBuiltFiles` in your PHP environment.
  
-## Support in the wild
+## Consuming the manifest
+
+Currently there's only one implementation for consuming the generated manifest in a PHP application:
 
 #### October CMS
 
