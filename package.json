@@ -1,0 +1,18 @@
+{
+  "name": "webpack-php-manifest",
+  "version": "0.0.1",
+  "description": "Writes output file names to a PHP file.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "webpack",
+    "php"
+  ],
+  "dependencies": {
+    "lodash": "^4.17.4"
+  },
+  "author": "Gabe Blair <gabe@castironcoding.com>",
+  "license": "MIT"
+}
