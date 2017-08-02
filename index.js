@@ -103,22 +103,10 @@ PhpManifestPlugin.prototype.apply = function apply (compiler) {
       cssFiles: getCssFiles(toInclude, filepath)
     });
 
-    // Insert this list into the webpack build as a new file asset:
-    if (webpackBuild) {
-      compilation.assets[output] = {
-        source: function() {
-          return out;
-        },
-        size: function() {
-          return out.length;
-        }
-      };
-    } else {
-      // Write file using fs
-      // Build directory if it doesn't exist
-      mkOutputDir(path.resolve(compiler.options.output.path));
-      fs.writeFileSync(path.join(compiler.options.output.path, output), out);
-    }
+    // Write file using fs
+    // Build directory if it doesn't exist
+    mkOutputDir(path.resolve(compiler.options.output.path));
+    fs.writeFileSync(path.join(compiler.options.output.path, output), out);
 
     callback();
   });
