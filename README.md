@@ -8,6 +8,9 @@ This webpack plugin will create a PHP file in your `output.path` directory with 
 attributes: `$jsFiles` and `$cssFiles`. These can be accessed by your PHP application to learn about what to include
 when rendering the frontend of the site.
 
+Note that the php manifest is created with (node fs)[https://nodejs.org/api/fs.html] independently of the Webpack
+output cycle. It will therefor be created in the same location when running a standard Webpack build *or* Webpack Dev Server
+
 ### Install
 
 With Yarn:
