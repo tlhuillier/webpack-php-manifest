@@ -1,6 +1,6 @@
 {
   "name": "webpack-php-manifest",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Writes output file names to a PHP file.",
   "main": "index.js",
   "repository": "gblair/webpack-php-manifest",
