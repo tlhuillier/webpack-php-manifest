@@ -49,11 +49,11 @@ PhpManifestPlugin.prototype.apply = function apply (compiler) {
   };
 
   var arrayToPhpStatic = function(list, varname) {
-    var out = '  static $' + varname + ' = [\n'
+    var out = '    static $' + varname + ' = array(\n'
     _.forEach(list, function (item) {
-      out += "    '" + item + "',";
+      out += "        '" + item + "',";
     });
-    out += '\n  ];\n';
+    out += '\n    );\n';
     return out;
   };
 
