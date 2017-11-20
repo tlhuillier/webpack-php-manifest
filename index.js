@@ -65,13 +65,13 @@ PhpManifestPlugin.prototype.apply = function apply (compiler) {
     // Create a header string for the generated file:
     var out = '<?php\n'
       + phpClassComment(phpClassName)
-      + 'class ' + phpClassName + ' {\n';
+      + 'class ' + phpClassName + '\n{\n';
 
     _.forEach(obj, function (list, name) {
       out += arrayToPhpStatic(list, name);
     });
 
-    out += '\n}\n';
+    out += '}\n';
     return out;
   };
 
